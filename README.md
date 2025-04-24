@@ -27,8 +27,13 @@ Key Features
 💻 Setup Instructions
 Clone the Repository:
 git clone [https://github.com/MarwaMahmoudSoliman/Evara.git ]
+----
 Project Setup:
+---
 Open the solution in Visual Studio
+----
 Configure the connection string in appsettings.json
+-----
 Run EF Core migrations: Update-Database 
+----
 Build and run the project using Visual Studio
