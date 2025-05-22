@@ -5,7 +5,6 @@ Project Overview
 
 EvAra is a full-stack ASP.NET Core online marketplace for fashion enthusiasts. Designed with modern aesthetics and robust functionality, it empowers sellers to showcase products while offering customers a seamless shopping experience – complete with secure payments and order tracking.
 
-Live Demo: https://evara-demo.example.com
 🌟 Key Features
 User Management
 
@@ -21,7 +20,7 @@ E-Commerce Core
 
     ⏳ Real-time inventory tracking
 
-    💳 Stripe/PayPal integration for secure payments
+    💳 Stripe integration for secure payments
 
     📦 Order history with shipment tracking
 
@@ -46,18 +45,18 @@ Layer	Technology
 Frontend	Razor Pages, AJAX, Bootstrap 5
 Backend	ASP.NET Core MVC, Web API
 Database	SQL Server + EF Core (Code-First)
-Payment	Stripe & PayPal APIs
-Deployment	Docker + Azure App Service
+Payment	Stripe  APIs
+
 ⚡ Getting Started
 Prerequisites
 
     Visual Studio 2022+
 
-    .NET 8 SDK
+    .NET 9 SDK
 
     SQL Server
 
-    Stripe/PayPal test keys
+    Stripe test keys
 
     SendGrid API key for emails
 
@@ -95,10 +94,7 @@ bash
 
     Visit https://localhost:5001
 
-🚀 Deployment
 
-Deployed via Azure App Service with CI/CD pipeline.
-Deploy to Azure
 📜 License
 
 MIT License - See LICENSE.md
