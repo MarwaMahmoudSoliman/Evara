@@ -8,9 +8,14 @@ EvAra is a full-stack ASP.NET Core online marketplace for fashion enthusiasts. D
 🌟 Key Features
 User Management
 
+
+     ASP.NET Core Identity (register, login, email confirmation, forgot password, reset password).
+    
+    External logins (Google, Facebook, Microsoft Account).
+
     Role-based access (Admin, Seller, Customer) via ASP.NET Core Identity
 
-    Email confirmation & password recovery using SendGrid
+    Email confirmation & password recovery
 
     Profile management with avatar uploads
 
@@ -46,6 +51,16 @@ Frontend	Razor Pages, AJAX, Bootstrap 5
 Backend	ASP.NET Core MVC, Web API
 Database	SQL Server + EF Core (Code-First)
 Payment	Stripe  APIs
+
+
+🏗️ Architecture & Design
+Clean Architecture Layers
+Layer	Responsibilities	Key Components
+Domain	Business logic & core entities	Product, Order, User aggregates
+Application	Use cases & interfaces	IProductRepository, OrderService
+Infrastructure	External implementations	EF Core,tripe API
+Presentation	UI & API endpoints	MVC Controllers, Razor Pages
+
 
 ⚡ Getting Started
 Prerequisites
@@ -94,11 +109,27 @@ bash
 
     Visit https://localhost:5001
 
+Contributing
 
-📜 License
+    Fork the repo
+    Create a feature branch (git checkout -b feat/my-new-feature)
+    Commit your changes (git commit -m 'Add new feature')
+    Push to the branch (git push origin feat/my-new-feature)
+    Open a Pull Request
 
-MIT License - See LICENSE.md
+Troubleshooting
 
+    Migrations failing? Ensure DefaultConnection is correct and SQL Server is running.
+    External logins not working? Verify OAuth credentials and redirect URIs in Google/Facebook developer consoles.
+    Stripe/PayPal errors? Check sandbox keys.
 
+License
+
+This project is licensed under the MIT License. See LICENSE for details.
+Acknowledgments
+
+    ASP.NET Core MVC Documentation
+    Entity Framework Core
+    PayPal API
 
 
