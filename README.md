@@ -40,16 +40,19 @@ EvAra is a full-stack ASP.NET Core online marketplace for fashion enthusiasts. D
 - **Backend**: ASP.NET Core MVC, Web API
 - **Database**: SQL Server + EF Core (Code-First)
 - **Payment**: Stripe API
-- **Email**: SMTP (SendGrid)
+- **Email**: SMTP 
 
 - ---
-🏗️ Architecture & Design
-Clean Architecture Layers
-Layer	Responsibilities	Key Components
-Domain	Business logic & entities	Product, Order, User
-Application	Use cases & interfaces	IProductRepository
-Infrastructure	External implementations	EF Core, Stripe API
-Presentation	UI & API endpoints	MVC Controllers
+## 🏗️ Architecture & Design
+
+### Clean Architecture Layers
+
+| **Layer**         | **Responsibilities**              | **Key Components**               |
+|-------------------|-----------------------------------|----------------------------------|
+| **Domain**        | Business logic & core entities    | `Product`, `Order`, `User`       |
+| **Application**   | Use cases & interfaces            | `IProductRepository`, `Services` |
+| **Infrastructure**| External implementations          | EF Core, Stripe API, SMTP        |
+| **Presentation**  | UI & API endpoints                | MVC Controllers, Razor Pages     |
 
 📌 UML Diagrams: View Diagrams
 ⚡ Getting Started
