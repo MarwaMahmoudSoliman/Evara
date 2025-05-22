@@ -45,6 +45,11 @@ Tech Highlights
 
     Responsive UI with Bootstrap 5 + custom themes
 
+UML Diagrams
+
+  class, sequence,use case  and Interaction diagrams link:https://drive.google.com/drive/folders/181sdzldFozvp8k09ajallaj_v4QQDuva
+
+![image](https://github.com/user-attachments/assets/18c680e6-eb59-4bc7-92e9-c7da76974937)# EvAra E-commerce 🛒
 🛠️ Tech Stack
 Layer	Technology
 Frontend	Razor Pages, AJAX, Bootstrap 5
@@ -92,9 +97,11 @@ json
 "Stripe": {
   "PublishableKey": "pk_test_...",
   "SecretKey": "sk_test_..."
-},
-"SendGrid": {
-  "ApiKey": "SG.your-api-key"
+}EmailSettings{
+  "FromEmail": "your-email@gmail.com",
+  "SmtpServer": "smtp.gmail.com",
+  "Port": 587,
+  "EnableSSL": true
 }
 
 Run migrations
@@ -130,6 +137,6 @@ Acknowledgments
 
     ASP.NET Core MVC Documentation
     Entity Framework Core
-    PayPal API
+   stripe API
 
 
