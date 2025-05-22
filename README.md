@@ -50,11 +50,17 @@ UML Diagrams
   class, sequence,use case  and Interaction diagrams link:https://drive.google.com/drive/folders/181sdzldFozvp8k09ajallaj_v4QQDuva
 
 ![image](https://github.com/user-attachments/assets/18c680e6-eb59-4bc7-92e9-c7da76974937)# EvAra E-commerce 🛒
+
 🛠️ Tech Stack
+---------------
 Layer	Technology
+---------------
 Frontend	Razor Pages, AJAX, Bootstrap 5
+----------------
 Backend	ASP.NET Core MVC, Web API
+---------------
 Database	SQL Server + EF Core (Code-First)
+-------------
 Payment	Stripe  APIs
 
 
