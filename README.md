@@ -4,123 +4,92 @@ EvAra E-commerce 🛍️
 Project Overview
 
 EvAra is a full-stack ASP.NET Core online marketplace for fashion enthusiasts. Designed with modern aesthetics and robust functionality, it empowers sellers to showcase products while offering customers a seamless shopping experience – complete with secure payments and order tracking.
-
 🌟 Key Features
-User Management
+👤 User Management
 
+    ASP.NET Core Identity (register/login/email confirmation)
 
-     ASP.NET Core Identity (register, login, email confirmation, forgot password, reset password).
-    
-    External logins (Google, Facebook, Microsoft Account).
+    Role-based access (Admin, Seller, Customer)
 
-    Role-based access (Admin, Seller, Customer) via ASP.NET Core Identity
-
-    Email confirmation & password recovery
+    External logins (Google, Facebook, Microsoft)
 
     Profile management with avatar uploads
 
-E-Commerce Core
+🛒 E-Commerce Core
 
-    🛒 Product catalog with filters (category, price, ratings)
+    Product catalog with filters (category, price, ratings)
 
-    ⏳ Real-time inventory tracking
+    Real-time inventory tracking
 
-    💳 Stripe integration for secure payments
+    Stripe integration for secure payments
 
-    📦 Order history with shipment tracking
+    Order history with shipment tracking
 
-Dashboards
+📊 Dashboards
 
-    📊 Admin panel for user management & analytics
+    Admin panel for user management & analytics
 
-    🏪 Seller portal to manage products/orders
+    Seller portal to manage products/orders
 
-    ❤️ Wishlists & saved carts for customers
-
-Tech Highlights
-
-    EF Core Code-First with SQL Server
-
-    Repository pattern & dependency injection
-
-    Responsive UI with Bootstrap 5 + custom themes
-
-UML Diagrams
-
-  class, sequence,use case  and Interaction diagrams link:https://drive.google.com/drive/folders/181sdzldFozvp8k09ajallaj_v4QQDuva
-
-![image](https://github.com/user-attachments/assets/18c680e6-eb59-4bc7-92e9-c7da76974937)# EvAra E-commerce 🛒
+    Customer wishlists & saved carts
 
 🛠️ Tech Stack
----------------
 Layer	Technology
----------------
 Frontend	Razor Pages, AJAX, Bootstrap 5
-----------------
 Backend	ASP.NET Core MVC, Web API
----------------
 Database	SQL Server + EF Core (Code-First)
--------------
-Payment	Stripe  APIs
-
-
+Payment	Stripe API
+Email	SendGrid/SMTP
 🏗️ Architecture & Design
 Clean Architecture Layers
 Layer	Responsibilities	Key Components
-Domain	Business logic & core entities	Product, Order, User aggregates
-Application	Use cases & interfaces	IProductRepository, OrderService
-Infrastructure	External implementations	EF Core,tripe API
-Presentation	UI & API endpoints	MVC Controllers, Razor Pages
+Domain	Business logic & entities	Product, Order, User
+Application	Use cases & interfaces	IProductRepository
+Infrastructure	External implementations	EF Core, Stripe API
+Presentation	UI & API endpoints	MVC Controllers
 
-
+📌 UML Diagrams: View Diagrams
 ⚡ Getting Started
 Prerequisites
 
     Visual Studio 2022+
 
-    .NET 9 SDK
+    .NET 8 SDK
 
     SQL Server
 
     Stripe test keys
 
-    SendGrid API key for emails
+Configuration (appsettings.json)
+json
+
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=EvaraDb;"
+  },
+  "Stripe": {
+    "PublishableKey": "pk_test_...",
+    "SecretKey": "sk_test_..."
+  },
+  "EmailSettings": {
+    "FromEmail": "your-email@gmail.com",
+    "SmtpServer": "smtp.gmail.com",
+    "Port": 587,
+    "EnableSSL": true
+  }
+}
 
 Setup
-
-    Clone the repo
-    bash
+bash
 
 git clone https://github.com/MarwaMahmoudSoliman/Evara.git
 cd Evara
+dotnet ef database update
+dotnet run
 
-Configure appsettings.json
-json
+📜 License
 
-"ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=EvaraDb;"
-},
-"Stripe": {
-  "PublishableKey": "pk_test_...",
-  "SecretKey": "sk_test_..."
-}EmailSettings{
-  "FromEmail": "your-email@gmail.com",
-  "SmtpServer": "smtp.gmail.com",
-  "Port": 587,
-  "EnableSSL": true
-}
-
-Run migrations
-bash
-
-Update-Database
-
-Launch
-bash
-
-    dotnet run
-
-    Visit https://localhost:5001
+MIT License - See LICENSE
 
 Contributing
 
