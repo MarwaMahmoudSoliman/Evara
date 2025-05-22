@@ -33,13 +33,16 @@ EvAra is a full-stack ASP.NET Core online marketplace for fashion enthusiasts. D
 
     Customer wishlists & saved carts
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	Razor Pages, AJAX, Bootstrap 5
-Backend	ASP.NET Core MVC, Web API
-Database	SQL Server + EF Core (Code-First)
-Payment	Stripe API
-Email	SendGrid/SMTP
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Razor Pages, AJAX, Bootstrap 5
+- **Backend**: ASP.NET Core MVC, Web API
+- **Database**: SQL Server + EF Core (Code-First)
+- **Payment**: Stripe API
+- **Email**: SMTP (SendGrid)
+
+- ---
 🏗️ Architecture & Design
 Clean Architecture Layers
 Layer	Responsibilities	Key Components
@@ -87,9 +90,6 @@ cd Evara
 dotnet ef database update
 dotnet run
 
-📜 License
-
-MIT License - See LICENSE
 
 Contributing
 
